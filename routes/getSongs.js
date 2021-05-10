@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();
 
 const getSongs = router.get("/getSongs", (req, res) => {
-  db.query("select * from songs order by id ASC", (error, resylts) => {
+  db.query("select * from songs order by id ASC", (error, results) => {
     if (error) {
       throw error;
     }
