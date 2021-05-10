@@ -1,0 +1,15 @@
+import { db } from "../db/index.js";
+
+import express from "express";
+const router = express.Router();
+
+const getSongs = router.get("/getSongs", (req, res) => {
+  db.query("select * from songs order by id ASC", (error, resylts) => {
+    if (error) {
+      throw error;
+    }
+    res.status(200).json(results.rows);
+  });
+});
+
+export default getSongs;

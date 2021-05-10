@@ -1,6 +1,6 @@
 import express from "express";
-
 import { morganMiddleware } from "./middleware/morgan.js";
+import getSongs from "./routes/getSongs.js";
 
 const app = express();
 
